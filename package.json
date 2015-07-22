@@ -19,6 +19,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "index.js",
     "test": "test.js"
   },
   "author": "Eyasu Kifle",
