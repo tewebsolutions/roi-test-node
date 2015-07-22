@@ -192,7 +192,7 @@ app.post('/api/forgot', function(req, res) {
 });
 
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 var server = app.listen(port, function() {
     console.log('%s listening at %s port %s', app.globals.APP_NAME, app.globals.APP_URL, port);
 });
