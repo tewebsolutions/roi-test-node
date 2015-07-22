@@ -1,0 +1,26 @@
+{
+  "name": "roi-test",
+  "version": "0.0.1",
+  "description": "ROI Node Test",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "mandrill": "^0.1.0",
+    "microtemplates": "^0.1.0",
+    "node-mandrill": "^1.0.1",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "passport-github2": "^0.1.9",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^3.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Eyasu Kifle",
+  "license": "MIT"
+}
