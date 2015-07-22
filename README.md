@@ -147,15 +147,14 @@ https://roi-test-node-kpsychwave.c9.io
 You need NPM/Node.JS installed globally:
 
 ```sh
-$ git clone [git-repo-url] roitest
-$ cd roitest
+$ git clone https://github.com/tewebsolutions/roi-test-node roi-test
+$ cd roi-test
 $ npm install
 $ chmod 644 private
 ```
 Update the contents of `globals.js` with your API keys and customizations
 ```sh
 $ npm start
-$ NODE_ENV=production node app
 ```
 
 ### External Services
