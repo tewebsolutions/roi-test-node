@@ -52,6 +52,7 @@ body#roi .button-primary
       padding: 0.5% 2.5%;
       font-size: 18px;
       color: #FFF;
+      opacity: 0;
       background: #FFF;
       -webkit-box-shadow: 0 0 2.5px grey;
       -moz-box-shadow: 0 0 2.5px grey;
