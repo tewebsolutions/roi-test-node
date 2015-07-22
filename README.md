@@ -85,7 +85,7 @@ The router uses the HTML5 History API and changing browser titles to simulate ac
 
 The Back-end uses SQLite for storing user information and utilizes ExpressJS/PassportJS for web services (`index.js`) and authentication (`auth.js`).
 
-It uses a DB abstraction (`db.php`) layer that can be substituted with MongoDB (or any other asynchronous RDBMS) for persisting user data. 
+It uses a DB abstraction (`db.js`) layer that can be substituted with MongoDB (or any other asynchronous RDBMS) for persisting user data. 
 
 The SQLite database is a minimalist database for basic user management. It consists of two tables `user`, `user_token`. 
 
@@ -98,17 +98,16 @@ All the secure API calls to the web service are secured with a unique session (c
 ####Registration
 
 - All user registrations must confirm their activation email before they can login.
-- Every time a person attempts to login, a new activation email is sent to the email address.
-- If a person activates his account, all email tokens become invalidated.
+- Every time an inactive account attempts to login, a new activation email is sent to the email address.
+- If a user activates his account, all email tokens become invalidated.
 
-Users who come through social networks do not need to confirm their email addresses. (The social network has already done this).
+Users who login through social networks do not need to confirm their email addresses, the social network has already done this for us.
 
 ####Password Reset
  
 - If a user loses their password, they can have a password reset link sent to their email. (24 hour expiration)
 - If a user clicks on a password reset link, they will become authenticated and be given the opportunity to set their new password.
 - Whenever a user sets his/her password, all email tokens become invalidated.
-
 
 
 ###Social Networks
@@ -121,7 +120,6 @@ The actions under the route `/api/<action>` can be safely transported into RESTf
 
 Currently the HTTP APIs are not RESTful web services, as they rely on session cookies. It is possible to override the authentication middleware in `auth.js` to use token based authentication.
 
-The app is not protected against CSRF attacks.
 
 
 ### Version
