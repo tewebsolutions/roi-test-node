@@ -19,8 +19,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "index.js",
-    "test": "test.js"
+    "start": "node index.js"
   },
   "author": "Eyasu Kifle",
   "license": "MIT"
